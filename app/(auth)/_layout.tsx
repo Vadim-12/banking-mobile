@@ -1,12 +1,12 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
 
-import { HapticTab } from '@/src/components/haptic-tab';
-import { IconSymbol } from '@/src/components/ui/icon-symbol';
-import { Colors } from '@/src/constants/theme';
-import { useColorScheme } from '@/src/hooks/use-color-scheme';
+import { HapticTab } from '@/components/haptic-tab';
+import { IconSymbol } from '@/components/ui/icon-symbol';
+import { Colors } from '@/constants/theme';
+import { useColorScheme } from '@/hooks/use-color-scheme';
 
-export default function TabLayout() {
+export default function AuthLayout() {
 	const colorScheme = useColorScheme();
 
 	return (
@@ -18,18 +18,18 @@ export default function TabLayout() {
 			}}
 		>
 			<Tabs.Screen
-				name='index'
+				name='sign-in'
 				options={{
-					title: 'Home',
+					title: 'Sign in',
 					tabBarIcon: ({ color }) => (
 						<IconSymbol size={28} name='house.fill' color={color} />
 					),
 				}}
 			/>
 			<Tabs.Screen
-				name='explore'
+				name='sign-up'
 				options={{
-					title: 'Explore',
+					title: 'Sign up',
 					tabBarIcon: ({ color }) => (
 						<IconSymbol size={28} name='paperplane.fill' color={color} />
 					),

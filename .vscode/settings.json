@@ -1,7 +1,30 @@
 {
-  "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit",
-    "source.organizeImports": "explicit",
-    "source.sortMembers": "explicit"
-  }
+	"editor.codeActionsOnSave": {
+		"source.fixAll": "explicit",
+		"source.organizeImports": "explicit",
+		"source.sortMembers": "explicit"
+	},
+
+	// Path Intellisense подсказывает папки после '@/'
+	"path-intellisense.mappings": { "@": "${workspaceFolder}/src" },
+	"path-intellisense.autoSlash": true,
+
+	// Использовать TS из проекта
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"typescript.enablePromptUseWorkspaceTsdk": true,
+
+	// Отключаем автоподсказки из package.json, чтобы @expo/* не лезли в топ
+	"typescript.preferences.includePackageJsonAutoImports": "off",
+	"javascript.preferences.includePackageJsonAutoImports": "off",
+
+	// Оставляем автоимпорт по файлам проекта
+	"typescript.suggest.autoImports": true,
+	"javascript.suggest.autoImports": true,
+
+	// Приоритет локальных путей выше
+	"editor.suggest.localityBonus": true,
+
+	// Предпочитать краткие (алиасные) импорты
+	"typescript.preferences.importModuleSpecifier": "non-relative",
+	"javascript.preferences.importModuleSpecifier": "non-relative"
 }

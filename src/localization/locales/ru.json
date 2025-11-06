@@ -1,0 +1,61 @@
+{
+	"auth": {
+		"title": {
+			"sign-in": "Вход",
+			"sign-up": "Регистрация"
+		},
+		"fields": {
+			"fullName": {
+				"label": "ФИО",
+				"placeholder": "Введите ваши ФИО"
+			},
+			"phoneNumber": {
+				"label": "Номер телефона",
+				"placeholder": "+7 (___) ___-__-__",
+				"errors": {
+					"notValid": "Введите корректный номер телефона"
+				}
+			},
+			"email": {
+				"label": "Email",
+				"placeholder": "Введите ваш Email",
+				"errors": {
+					"notValid": "Невалидный Email"
+				}
+			},
+			"password": {
+				"label": "Пароль",
+				"placeholder": "Введите пароль",
+				"hint": "Минимум {{n}} символов",
+				"errors": {
+					"minLength": "Пароль должен состоять хотя бы из {{n}} символов"
+				}
+			},
+			"passwordRepeat": {
+				"label": "Подтверждение пароля",
+				"placeholder": "Введите пароль повторно"
+			}
+		},
+		"buttons": {
+			"sign-in": {
+				"enter": "Войти",
+				"navigation": {
+					"firstPart": "Еще нет аккаунта? Пройдите ",
+					"secondPart": "регистрацию"
+				}
+			},
+			"sign-up": {
+				"enter": "Зарегистрироваться",
+				"navigation": {
+					"firstPart": "Уже есть аккаунт? Пройдите ",
+					"secondPart": "авторизацию"
+				}
+			}
+		}
+	},
+	"errors": {
+		"form": {
+			"requiredField": "Это обязательное поле"
+		}
+	}
+}
