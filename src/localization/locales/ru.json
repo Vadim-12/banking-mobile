@@ -7,7 +7,10 @@
 		"fields": {
 			"fullName": {
 				"label": "ФИО",
-				"placeholder": "Введите ваши ФИО"
+				"placeholder": "Введите ваши ФИО",
+				"errors": {
+					"notValid": "Введите фамилию и имя полностью"
+				}
 			},
 			"phoneNumber": {
 				"label": "Номер телефона",
@@ -31,9 +34,13 @@
 					"minLength": "Пароль должен состоять хотя бы из {{n}} символов"
 				}
 			},
-			"passwordRepeat": {
+			"passwordConfirm": {
 				"label": "Подтверждение пароля",
-				"placeholder": "Введите пароль повторно"
+				"placeholder": "Введите пароль повторно",
+				"hint": "Повторите пароль для подтверждения",
+				"errors": {
+					"notMatch": "Пароли не совпадают"
+				}
 			}
 		},
 		"buttons": {

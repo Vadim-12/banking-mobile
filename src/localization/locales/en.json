@@ -7,7 +7,10 @@
 		"fields": {
 			"fullName": {
 				"label": "Fullname",
-				"placeholder": "Enter your fullname"
+				"placeholder": "Enter your fullname",
+				"errors": {
+					"notValid": "Please enter your first and last name"
+				}
 			},
 			"phoneNumber": {
 				"label": "Phone number",
@@ -31,9 +34,13 @@
 					"minLength": "Password must has at least {{n}} characters"
 				}
 			},
-			"passwordRepeat": {
+			"passwordConfirm": {
 				"label": "Подтверждение пароля",
-				"placeholder": "Введите пароль повторно"
+				"placeholder": "Введите пароль повторно",
+				"hint": "Repeat your password to confirm",
+				"errors": {
+					"notMatch": "Passwords do not match"
+				}
 			}
 		},
 		"buttons": {

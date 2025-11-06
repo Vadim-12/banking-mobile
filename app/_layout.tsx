@@ -5,6 +5,7 @@ import {
 	DefaultTheme,
 	ThemeProvider,
 } from '@react-navigation/native';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
 import { NativeBaseProvider } from 'native-base';
@@ -14,6 +15,8 @@ import 'react-native-reanimated';
 // export const unstable_settings = {
 // 	anchor: '(tabs)',
 // };
+
+const queryClient = new QueryClient();
 
 export default function RootLayout() {
 	const colorScheme = useColorScheme();
@@ -27,16 +30,18 @@ export default function RootLayout() {
 
 	return (
 		<ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-			<NativeBaseProvider>
-				<Stack>
-					<Stack.Screen name='(tabs)' options={{ headerShown: false }} />
-					<Stack.Screen
-						name='modal'
-						options={{ presentation: 'modal', title: 'Modal' }}
-					/>
-				</Stack>
-				<StatusBar style='auto' />
-			</NativeBaseProvider>
+			<QueryClientProvider client={queryClient}>
+				<NativeBaseProvider>
+					<Stack>
+						<Stack.Screen name='(tabs)' options={{ headerShown: false }} />
+						<Stack.Screen
+							name='modal'
+							options={{ presentation: 'modal', title: 'Modal' }}
+						/>
+					</Stack>
+					<StatusBar style='auto' />
+				</NativeBaseProvider>
+			</QueryClientProvider>
 		</ThemeProvider>
 	);
 }
